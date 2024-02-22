@@ -1,0 +1,59 @@
+.first-sec {
+  margin-top: 60px;
+  .container {
+    max-width: 1115px;
+    margin: auto;
+
+    .home {
+      @include flexible($gap: 104px);
+      
+    
+
+      @media (max-width: 768px) {
+        @include flexible($gap: 12px, $direction: column,$wrap:wrap);
+
+        .home-content {
+          padding: 50px;
+        }
+
+        .home-image {
+          padding: 0 30px;
+        }
+      }
+
+      .home-image {
+        max-width: 531px;
+        height: 100%;
+
+        img {
+          @extend %img_extened;
+        }
+      }
+
+      .home-content {
+        text-align: start;
+        max-width: 588px;
+        padding-top: 52px;
+        h2 {
+          font-size: 38px;
+
+          font-weight: 400;
+          color: #38343d;
+        }
+
+        .texts {
+          margin-top: 30px;
+
+          @include flexible($direction: column, $gap: 23px);
+
+          p {
+            color: $grey_80;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
